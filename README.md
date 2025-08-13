@@ -93,6 +93,22 @@ _✨ 一个谁是卧底小游戏插件 ✨_
 | CONFIG_PATH | 否 | `"config.json"` | 游戏配置项文件 |
 | STATS_PATH | 否 | `"stats.json"` | 游戏统计数据 |
 
+## 📂 词库
+
+插件的词库文件使用 JSON 格式，存放在：
+
+[template/undercover_words.json](template/undercover_words.json)
+
+文件内容是一个二维数组，每一项是一个词对，格式为：
+
+```json
+[
+  ["平民词", "卧底词"],
+  ["苹果", "香蕉"],
+  ["猫", "狗"],
+  ["飞机", "火车"]
+]
+
 ## 🎉 使用
 
 ### 指令
