@@ -1,70 +1,40 @@
 <div align="center">
-  <a href="https://v2.nonebot.dev/store"><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
+  <img src="https://s2.loli.net/2022/06/16/opBDE8Swad5rU3n.png" width="180" height="180" alt="NoneBotPluginLogo">
   <br>
-  <p><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/NoneBotPlugin.svg" width="240" alt="NoneBotPluginText"></p>
+  <p><img src="https://s2.loli.net/2022/06/16/xsVUGRrkbn1ljTD.png" width="240" alt="NoneBotPluginText"></p>
 </div>
 
 <div align="center">
 
-# nonebot-plugin-template
+# nonebot-plugin-who-is-spy
 
-_✨ NoneBot 插件简单描述 ✨_
+_✨ 一个谁是卧底小游戏插件 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+    <img src="https://img.shields.io/github/license/Hanserprpr/nonebot-plugin-who-is-spy.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-who-is-spy">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-who-is-spy.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 
 </div>
 
-这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
-
-<details open>
-<summary>模板库使用方法</summary>
-
-1. 点击 [![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=A-kirami&template_name=nonebot-plugin-template&owner=%40me&name=nonebot-plugin-&visibility=public) 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`nonebot-plugin-template`为插件名; 全局替换`nonebot_plugin_template`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
-
-</details>
-
-> [!NOTE]
-> 模板库中自带了一个发布工作流, 你可以使用此工作流自动发布你的插件到 pypi
-
-<details>
-<summary>配置发布工作流</summary>
-
-1. 前往 https://pypi.org/manage/account/#api-tokens 并创建一个新的 API 令牌。创建成功后不要关闭页面，不然你将无法再次查看此令牌。
-2. 在单独的浏览器选项卡或窗口中，打开 [Actions secrets and variables](./settings/secrets/actions) 页面。你也可以在 Settings - Secrets and variables - Actions 中找到此页面。
-3. 点击 New repository secret 按钮，创建一个名为 `PYPI_API_TOKEN` 的新令牌，并从第一步复制粘贴令牌。
-
-</details>
-
-> [!IMPORTANT]
-> 这个发布工作流需要 pyproject.toml 文件, 并且只支持 [PEP 621](https://peps.python.org/pep-0621/) 标准的 pyproject.toml 文件
-
-<details>
-<summary>触发发布工作流</summary>
-从本地推送任意 tag 即可触发。
-
-创建 tag:
-
-    git tag <tag_name>
-
-推送本地所有 tag:
-
-    git push origin --tags
-
-</details>
+一个基于 **[NoneBot2](https://nonebot.dev/)** 的群聊游戏插件 —— **谁是卧底**  
+支持 **群聊轮流发言** + **私聊匿名投票**，带有胜场统计、排行榜、胜率榜等功能。
 
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+`nonebot-plugin-who-is-spy` 是一个基于 [NoneBot2](https://v2.nonebot.dev/) 开发的多人群聊游戏插件，复刻了经典的 **谁是卧底** 桌游玩法。  
+它支持在 QQ 群里发起游戏，玩家轮流发言，通过私聊匿名投票淘汰嫌疑人，直到一方胜利。  
+
+特点：
+- **规则完整**：平民、卧底、白板三种身份，还原线下游戏体验  
+- **私聊投票**：保护投票隐私，避免被针对  
+- **自动化流程**：发言、投票、淘汰、胜负判定全程自动进行  
+- **数据统计**：记录胜场、参与次数，支持排行榜与胜率榜  
+- **可定制化**：词库、玩家人数、白板开关、身份提示等均可配置
 
 ## 💿 安装
 
@@ -72,7 +42,7 @@ _✨ NoneBot 插件简单描述 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-template
+    nb plugin install nonebot-plugin-who-is-spy
 
 </details>
 
@@ -83,22 +53,22 @@ _✨ NoneBot 插件简单描述 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-template
+    pip install nonebot-plugin-who-is-spy
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-template
+    pdm add nonebot-plugin-who-is-spy
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-template
+    poetry add nonebot-plugin-who-is-spy
 </details>
 <details>
 <summary>conda</summary>
 
-    conda install nonebot-plugin-template
+    conda install nonebot-plugin-who-is-spy
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
@@ -113,14 +83,52 @@ _✨ NoneBot 插件简单描述 ✨_
 
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| 配置项1 | 是 | 无 | 配置说明 |
-| 配置项2 | 否 | 无 | 配置说明 |
+| MIN_PLAYERS | 否 | 4 | 最少人数 |
+| MAX_PLAYERS | 否 | 12 | 最大人数 |
+| DEFAULT_UNDERCOVERS | 否 | 1 | 默认卧底人数 |
+| ALLOW_BLANK | 否 | True | 是否允许白板 |
+| SHOW_ROLE_DEFAULT | 否 | False | 发词时是否显示身份 |
+| DATA_DIR | 否 | `"/data/undercover/"` | 数据目录 |
+| WORD_FILE | 否 | `"undercover_words.json"` | 词库文件 |
+| CONFIG_PATH | 否 | `"config.json"` | 游戏配置项文件 |
+| STATS_PATH | 否 | `"stats.json"` | 游戏统计数据 |
 
 ## 🎉 使用
-### 指令表
-| 指令 | 权限 | 需要@ | 范围 | 说明 |
-|:-----:|:----:|:----:|:----:|:----:|
-| 指令1 | 主人 | 否 | 私聊 | 指令说明 |
-| 指令2 | 群员 | 是 | 群聊 | 指令说明 |
+
+### 指令
+
+- 在群内发送 `卧底帮助` 即可获取帮助
+
+```sh
+🎮 谁是卧底 - 群聊版玩法说明
+——————————
+【开局】
+卧底开局 [卧底人数] [blank]  → 创建房间（可选参数：卧底人数，blank=有白板）
+加入   → 进入房间
+发身份 → 房主开始游戏并私聊词语
+
+【发言阶段】
+- 系统会在群里公布发言顺序
+- 轮到谁，谁直接在群里说一句描述
+- 每人一句话，依次发完自动进入投票
+
+【投票阶段（私聊进行）】
+- 机器人私聊存活玩家投票序号列表
+- 私聊直接回复数字：0=弃权，数字=投票对象
+
+【胜负判定】
+- 卧底全出局 → 平民胜利
+- 卧底数≥平民数 → 卧底胜利
+
+【常用指令】
+状态   → 查看当前局势和投票序号
+复盘   → 查看上一局记录
+结束卧底 → 强制结束当前局
+身份提示 开/关 → 设置私聊是否提示身份
+卧底帮助 → 查看本说明
+胜率榜 / 我的胜率 → 查看胜率 
+```
+
 ### 效果图
-如果有效果图的话
+
+![alt text](dd293f33ba2a5fab033aa7829a44c20a.jpg)
