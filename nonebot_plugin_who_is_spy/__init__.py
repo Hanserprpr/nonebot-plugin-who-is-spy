@@ -7,8 +7,9 @@ import re
 import random
 from dataclasses import dataclass, field
 from typing import Dict, Set, List, Optional, Tuple
+from pathlib import Path
 
-from nonebot import on_command, on_message, get_bot, get_plugin_config
+from nonebot import on_command, on_message, get_bot, get_plugin_config, require
 from nonebot.params import CommandArg
 from nonebot.matcher import Matcher
 from nonebot.rule import Rule
@@ -23,6 +24,9 @@ from nonebot.adapters.onebot.v11.permission import PRIVATE
 from nonebot.plugin import PluginMetadata
 
 from .config import Config
+require("nonebot_plugin_localstore")
+
+import nonebot_plugin_localstore as store
 
 __plugin_meta__ = PluginMetadata(
     name="谁是卧底小游戏",
@@ -47,10 +51,10 @@ DEFAULT_UNDERCOVERS = plugin_config.DEFAULT_UNDERCOVERS
 ALLOW_BLANK = plugin_config.ALLOW_BLANK
 SHOW_ROLE_DEFAULT = plugin_config.SHOW_ROLE_DEFAULT
 
-DATA_DIR = plugin_config.DATA_DIR
-WORD_FILE = plugin_config.WORD_FILE or os.path.join(DATA_DIR, "undercover_words.json")
-CONFIG_PATH = plugin_config.CONFIG_PATH or os.path.join(DATA_DIR, "config.json")
-STATS_PATH = plugin_config.STATS_PATH or os.path.join(DATA_DIR, "stats.json")
+DATA_DIR = store.get_plugin_data_dir()
+WORD_FILE = plugin_config.WORD_FILE or store.get_plugin_data_file("undercover_words.json")
+CONFIG_PATH = plugin_config.CONFIG_PATH or store.get_plugin_config_file("spy_config.json")
+STATS_PATH = plugin_config.STATS_PATH or store.get_plugin_data_file("stats.json")
 
 # ===================== 保证数据目录 =====================
 os.makedirs(DATA_DIR, exist_ok=True)

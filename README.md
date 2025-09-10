@@ -83,15 +83,14 @@ _✨ 一个谁是卧底小游戏插件 ✨_
 
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| MIN_PLAYERS | 否 | 4 | 最少人数 |
-| MAX_PLAYERS | 否 | 12 | 最大人数 |
-| DEFAULT_UNDERCOVERS | 否 | 1 | 默认卧底人数 |
-| ALLOW_BLANK | 否 | True | 是否允许白板 |
-| SHOW_ROLE_DEFAULT | 否 | False | 发词时是否显示身份 |
-| DATA_DIR | 否 | `"/data/undercover/"` | 数据目录 |
-| WORD_FILE | 否 | `"undercover_words.json"` | 词库文件 |
-| CONFIG_PATH | 否 | `"config.json"` | 游戏配置项文件 |
-| STATS_PATH | 否 | `"stats.json"` | 游戏统计数据 |
+| spy_min_players | 否 | 4 | 最少人数 |
+| spy_max_players | 否 | 12 | 最大人数 |
+| spy_default_undercovers | 否 | 1 | 默认卧底人数 |
+| spy_allow_blank | 否 | True | 是否允许白板 |
+| spy_show_role_default | 否 | False | 发词时是否显示身份 |
+| spy_word_file | 否 | `"undercover_words.json"` | 词库文件 |
+| spy_config_path | 否 | `"config.json"` | 游戏配置项文件 |
+| spy_stats_path | 否 | `"stats.json"` | 游戏统计数据 |
 
 ## 📂 词库
 
