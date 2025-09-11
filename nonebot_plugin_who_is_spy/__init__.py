@@ -45,16 +45,16 @@ __plugin_meta__ = PluginMetadata(
 plugin_config = get_plugin_config(Config)
 
 # ===================== 常量 & 路径 =====================
-MIN_PLAYERS = plugin_config.MIN_PLAYERS
-MAX_PLAYERS = plugin_config.MAX_PLAYERS
-DEFAULT_UNDERCOVERS = plugin_config.DEFAULT_UNDERCOVERS
-ALLOW_BLANK = plugin_config.ALLOW_BLANK
-SHOW_ROLE_DEFAULT = plugin_config.SHOW_ROLE_DEFAULT
+MIN_PLAYERS = plugin_config.spy_min_players
+MAX_PLAYERS = plugin_config.spy_max_players
+DEFAULT_UNDERCOVERS = plugin_config.spy_default_undercovers
+ALLOW_BLANK = plugin_config.spy_allow_blank
+SHOW_ROLE_DEFAULT = plugin_config.spy_show_role_default
 
 DATA_DIR = store.get_plugin_data_dir()
-WORD_FILE = plugin_config.WORD_FILE or store.get_plugin_data_file("undercover_words.json")
-CONFIG_PATH = plugin_config.CONFIG_PATH or store.get_plugin_config_file("spy_config.json")
-STATS_PATH = plugin_config.STATS_PATH or store.get_plugin_data_file("stats.json")
+WORD_FILE = plugin_config.spy_word_file or store.get_plugin_data_file("undercover_words.json")
+CONFIG_PATH = plugin_config.spy_config_path or store.get_plugin_config_file("spy_config.json")
+STATS_PATH = plugin_config.spy_stats_path or store.get_plugin_data_file("stats.json")
 
 # ===================== 保证数据目录 =====================
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -104,8 +104,8 @@ def _load_json_file(path: str, default):
     except Exception:
         return default
 
-def _atomic_write_json(path: str, data):
-    tmp = path + ".tmp"
+def _atomic_write_json(path: Path, data):
+    tmp = path.with_suffix(path.suffix + ".tmp")
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     os.replace(tmp, path)
