@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "nonebot_plugin_who_is_spy"
-version = "0.0.2"
+version = "0.0.3"
 description = "一款适用于QQ群的谁是卧底小游戏插件"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -18,4 +18,5 @@ dependencies = [
 
 [project.urls]
 Home = "https://github.com/Hanserprpr/nonebot-plugin-who-is-spy"
+
 
