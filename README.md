@@ -89,7 +89,6 @@ _✨ 一个谁是卧底小游戏插件 ✨_
 | spy_allow_blank | 否 | True | 是否允许白板 |
 | spy_show_role_default | 否 | False | 发词时是否显示身份 |
 | spy_word_file | 否 | `"undercover_words.json"` | 词库文件 |
-| spy_config_path | 否 | `"config.json"` | 游戏配置项文件 |
 | spy_stats_path | 否 | `"stats.json"` | 游戏统计数据 |
 
 ## 📂 词库
