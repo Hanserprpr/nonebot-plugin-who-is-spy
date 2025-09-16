@@ -88,8 +88,6 @@ _✨ 一个谁是卧底小游戏插件 ✨_
 | spy_default_undercovers | 否 | 1 | 默认卧底人数 |
 | spy_allow_blank | 否 | True | 是否允许白板 |
 | spy_show_role_default | 否 | False | 发词时是否显示身份 |
-| spy_word_file | 否 | `"undercover_words.json"` | 词库文件 |
-| spy_stats_path | 否 | `"stats.json"` | 游戏统计数据 |
 
 ## 📂 词库
 
@@ -107,6 +105,10 @@ _✨ 一个谁是卧底小游戏插件 ✨_
   ["飞机", "火车"]
 ]
 ```
+
+运行 `nb localstore` 来获取数据路径，将[词库文件](template/undercover_words.json)放在 `Data Dir` 下名为 `nonebot_plugin_who_is_spy` 的文件夹内。
+
+例如Windows下，使用 `"C:\Users\***\AppData\Local\nonebot2\nonebot_plugin_who_is_spy\undercover_words.json"` 作为词库路径
 
 ## 🎉 使用
 

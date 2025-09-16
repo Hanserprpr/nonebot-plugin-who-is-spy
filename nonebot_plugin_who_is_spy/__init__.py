@@ -52,9 +52,9 @@ ALLOW_BLANK = plugin_config.spy_allow_blank
 SHOW_ROLE_DEFAULT = plugin_config.spy_show_role_default
 
 DATA_DIR = store.get_plugin_data_dir()
-WORD_FILE = plugin_config.spy_word_file or store.get_plugin_data_file("undercover_words.json")
+WORD_FILE = store.get_plugin_data_file("undercover_words.json")
 CONFIG_PATH = store.get_plugin_config_file("spy_config.json")
-STATS_PATH = plugin_config.spy_stats_path or store.get_plugin_data_file("stats.json")
+STATS_PATH = store.get_plugin_data_file("stats.json")
 
 # ===================== 保证数据目录 =====================
 os.makedirs(DATA_DIR, exist_ok=True)
